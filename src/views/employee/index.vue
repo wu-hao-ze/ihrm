@@ -143,7 +143,7 @@ export default {
     // 获取左侧树形结构的数据
     async getDepartment() {
       // 递归方法，将列表数据转化成树形数据
-      this.depts = transListToTreeData(await getDepartment(), 1)
+      this.depts = transListToTreeData(await getDepartment(), 0)
       // 设置选中节点
       this.queryParams.departmentId = this.depts[0].id
       // 树组件渲染是异步的，等到更新完毕才能选中
